@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 # The wrapper script for the creation of LUKS partition
 #

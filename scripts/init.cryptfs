@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 # Initramfs script called by /init
 #
@@ -126,7 +126,7 @@ get_dev_partuuid() {
 get_dev_label() {
     rawdev=`blkid -t LABEL=$1 -l | awk -F: '{print $1}'`
     # Also try the partition label for the same name if not found
-    if [ "$rawdev" == "" ] ; then
+    if [ "$rawdev" = "" ] ; then
 	rawdev=`blkid -t PARTLABEL=$1 -l | awk -F: '{ print $1 }'`
     fi
     echo $rawdev
